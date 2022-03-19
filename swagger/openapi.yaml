@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: Image Converter
+  description: '画像変換'
+  version: 1.0.0
+servers:
+- url: http://127.0.0.1:5000/
+- url: http://localhost:5000/
+tags:
+- name: url
+paths:
+  /url:
+    get:
+      tags:
+      - url
+      summary: urlを入力に、画像を出力する
+      description: urlを入力に、画像を出力する
+      operationId: getImageForURL
+      parameters:
+      - in: query
+        name: url
+        schema:
+          type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
