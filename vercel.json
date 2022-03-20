@@ -1,10 +1,15 @@
 {
-  "trailingSlash": false,
   "regions": ["hnd1"],
   "functions": {
     "api/index.py": {
       "memory": 1024,
       "maxDuration": 10
     }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py"}
+  ],
+  "env": {
+    "APP_ROOT": "api"
   }
 }
