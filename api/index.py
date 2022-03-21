@@ -25,7 +25,7 @@ if APP_ROOT is not None:
 
 app.app.json_encoder = encoder.JSONEncoder
 app.add_api('openapi.yaml',
-            arguments={'title': 'Image Converter'},
+            arguments={'title': 'Swagger Petstore'},
             pythonic_params=True)
 
 if __name__ == '__main__':
